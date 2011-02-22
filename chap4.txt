@@ -1,0 +1,697 @@
+Script started on Tue Feb 15 15:07:49 2011
+bash-3.2$ rails console
+Loading development environment (Rails 3.0.3)
+ruby-1.9.2-p136 :001 > 17 + 42  # Integer Addition
+ => 59 
+ruby-1.9.2-p136 :002 > ""
+ => "" 
+ruby-1.9.2-p136 :003 > "foo"
+ => "foo" 
+ruby-1.9.2-p136 :004 > "foo" + "bar"
+ => "foobar" 
+ruby-1.9.2-p136 :005 > first_name = "Nate"
+ => "Nate" 
+ruby-1.9.2-p136 :006 > lat[Kst+name[K[K[K[K[K_name = "Stier"
+ => "Stier" 
+ruby-1.9.2-p136 :007 > first_name + " " + last_name
+ => "Nate Stier" 
+ruby-1.9.2-p136 :008 > #{first_name} #{last_name}"[4h"[4l##{first_name} #{last_name}"
+ => "Nate Stier" 
+ruby-1.9.2-p136 :009 > puts "foo"
+foo
+ => nil 
+ruby-1.9.2-p136 :010 > print "foo"
+foo => nil 
+ruby-1.9.2-p136 :011 > print "foo/n"[K[K[K\n"
+foo
+ => nil 
+ruby-1.9.2-p136 :012 > 'foo'
+ => "foo" 
+ruby-1.9.2-p136 :013 > foo' [K[K[K[K'foo' + 'bar'
+ => "foobar" 
+ruby-1.9.2-p136 :014 > '#{foo} bar'
+ => "\#{foo} bar" 
+ruby-1.9.2-p136 :015 > '\n'
+ => "\\n" 
+ruby-1.9.2-p136 :016 > 'Newlines (\n) and tabs (\t) both use the backslash cha racter \.'
+ => "Newlines (\\n) and tabs (\\t) both use the backslash character \\." 
+ruby-1.9.2-p136 :017 > "foobar".length
+ => 6 
+ruby-1.9.2-p136 :018 > "foobar".empty
+NoMethodError: undefined method `empty' for "foobar":String
+	from (irb):18
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :019 > "foobar".empty?
+ => false 
+ruby-1.9.2-p136 :020 > "".empty?
+ => true 
+ruby-1.9.2-p136 :021 > s = "foobar"
+ => "foobar" 
+ruby-1.9.2-p136 :022 > if s.empty?
+ruby-1.9.2-p136 :023?>   "The string is empty"
+ruby-1.9.2-p136 :024?>   else
+ruby-1.9.2-p136 :025 >[5C"the [K[K[KThe string is not empty"
+ruby-1.9.2-p136 :026?>   end
+ => "The string is not empty" 
+ruby-1.9.2-p136 :027 > x ="foo"
+ => "foo" 
+ruby-1.9.2-p136 :028 > y= ""
+ => "" 
+ruby-1.9.2-p136 :029 > puts "both[K[K[K[KBoth strings are empty" if x.empty && y.empty[4h?[4l  && y.empty?
+ => nil 
+ruby-1.9.2-p136 :030 > puts "Both strings are empty" if x.empty? && y.empty?[P [P [4h|[4l [4h|[4l h[P [P [P [P [4hO[4l [4hn[4l [4he[4l 
+One strings are empty
+ => nil 
+ruby-1.9.2-p136 :031 > puts "One strings are empty" if x.empty? || y.empty? [4h [4ls[4ho[4l [4hf[4l  [4h [4l[40Cy ?[A[35C[4ht[4l[40Ct?y?[A[35C[4hh[4l[39Cpyty?[A[35C[4he[4l[38Cmtpty?[A[35C[38Cmp
+One of the strings are empty
+ => nil 
+ruby-1.9.2-p136 :032 > puts "x is not empty" if !x.empty?
+x is not empty
+ => nil 
+ruby-1.9.2-p136 :033 > nil.to_s
+ => "" 
+ruby-1.9.2-p136 :034 > nil.empty?
+NoMethodError: You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.empty?
+	from (irb):34
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :035 > nil.empty?[4ht[4le[4ho[4le[4h_[4le[4hs[4le[4h.[4le
+ => true 
+ruby-1.9.2-p136 :036 > "foo".nil?
+ => false 
+ruby-1.9.2-p136 :037 > "".nil?
+ => false 
+ruby-1.9.2-p136 :038 > nil.nil?
+ => true 
+ruby-1.9.2-p136 :039 > title
+NameError: undefined local variable or method `title' for main:Object
+	from (irb):39
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :040 > @title
+ => nil 
+ruby-1.9.2-p136 :041 > puts "The is o such [K[K[K[K[Kno such instance variable." if @title.nil? 
+The is no such instance variable.
+ => nil 
+ruby-1.9.2-p136 :042 > "#{@title}"
+ => "" 
+ruby-1.9.2-p136 :043 > if nil
+ruby-1.9.2-p136 :044?>   true
+ruby-1.9.2-p136 :045?>   else
+ruby-1.9.2-p136 :046 >[5Cfalse
+ruby-1.9.2-p136 :047?>   end
+ => false 
+ruby-1.9.2-p136 :048 > def string_message(string)
+ruby-1.9.2-p136 :049?>   if string.empty?
+ruby-1.9.2-p136 :050?>[5C"it's an empty string!"
+ruby-1.9.2-p136 :051?>[5Celse
+ruby-1.9.2-p136 :052 >[7C"The string in nonempty."
+ruby-1.9.2-p136 :053?>[5Cend
+ruby-1.9.2-p136 :054?>   end
+ => nil 
+ruby-1.9.2-p136 :055 > puts string_message("")
+it's an empty string!
+ => nil 
+ruby-1.9.2-p136 :056 > puts string_message("")f")o")o")b")a")r")
+The string in nonempty.
+ => nil 
+ruby-1.9.2-p136 :057 > "foo bar       baz".split
+ => ["foo", "bar", "baz"] 
+ruby-1.9.2-p136 :058 > foo[K[K[K"foox"[Kbarxbaz".split(/[K'x')
+ => ["foo", "bar", "baz"] 
+ruby-1.9.2-p136 :059 > a = [42, 8, 17]
+ => [42, 8, 17] 
+ruby-1.9.2-p136 :060 > a[0]
+ => 42 
+ruby-1.9.2-p136 :061 > a[1]
+ => 8 
+ruby-1.9.2-p136 :062 > a[2]
+ => 17 
+ruby-1.9.2-p136 :063 > a[-1]
+ => 17 
+ruby-1.9.2-p136 :064 > a
+ => [42, 8, 17] 
+ruby-1.9.2-p136 :065 > a.first
+ => 42 
+ruby-1.9.2-p136 :066 > a.second
+ => 8 
+ruby-1.9.2-p136 :067 > a.lst[K[Kast
+ => 17 
+ruby-1.9.2-p136 :068 > a.last == a[-1]
+ => true 
+ruby-1.9.2-p136 :069 > x = a.length
+ => 3 
+ruby-1.9.2-p136 :070 > x == 3
+ => true 
+ruby-1.9.2-p136 :071 > x == 1
+ => false 
+ruby-1.9.2-p136 :072 > x != 1
+ => true 
+ruby-1.9.2-p136 :073 > x >=1[K 1
+ => true 
+ruby-1.9.2-p136 :074 > x < 1
+ => false 
+ruby-1.9.2-p136 :075 > a.sort
+ => [8, 17, 42] 
+ruby-1.9.2-p136 :076 > a.reverse
+ => [17, 8, 42] 
+ruby-1.9.2-p136 :077 > a.shuffle
+ => [8, 42, 17] 
+ruby-1.9.2-p136 :078 > a << 7
+ => [42, 8, 17, 7] 
+ruby-1.9.2-p136 :079 > a << "foo" << "bar"
+ => [42, 8, 17, 7, "foo", "bar"] 
+ruby-1.9.2-p136 :080 > a.join
+ => "428177foobar" 
+ruby-1.9.2-p136 :081 > a.join(', ')
+ => "42, 8, 17, 7, foo, bar" 
+ruby-1.9.2-p136 :082 > 0..9
+ => 0..9 
+ruby-1.9.2-p136 :083 > 0..9.to_a
+NoMethodError: undefined method `to_a' for 9:Fixnum
+	from (irb):83
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :084 > (0..9).to_a
+ => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] 
+ruby-1.9.2-p136 :085 > a = %w[foo bar baz quux]
+ => ["foo", "bar", "baz", "quux"] 
+ruby-1.9.2-p136 :086 > a[0..2]
+ => ["foo", "bar", "baz"] 
+ruby-1.9.2-p136 :087 > ('a'..'e').to_a
+ => ["a", "b", "c", "d", "e"] 
+ruby-1.9.2-p136 :088 > (1..5).each { |i| puts 2*i }
+2
+4
+6
+8
+10
+ => 1..5 
+ruby-1.9.2-p136 :089 > (1..5).each s[Kdo |i|
+ruby-1.9.2-p136 :090 >[5Cputs 2 * 1
+ruby-1.9.2-p136 :091?>   end
+2
+2
+2
+2
+2
+ => 1..5 
+ruby-1.9.2-p136 :092 > endputs 2 * 1[10D(1..5).each do |i|
+ruby-1.9.2-p136 :093 >[5C(1..5).each do |i|[18Dend[Kputs 2 * 1[Ki
+ruby-1.9.2-p136 :094?>   puts 2 * i[10D(1..5).each do |i|[18Dend[K
+2
+4
+6
+8
+10
+ => 1..5 
+ruby-1.9.2-p136 :095 > (1..5).each do |number|
+ruby-1.9.2-p136 :096 >[5Cputs 2 * number
+ruby-1.9.2-p136 :097?>   puts '__'[K[K[K--'
+ruby-1.9.2-p136 :098?>   end
+2
+--
+4
+--
+6
+--
+8
+--
+10
+--
+ => 1..5 
+ruby-1.9.2-p136 :099 > 3.times { puts "tet[K[K[KBetelgeuse!" }
+Betelgeuse!
+Betelgeuse!
+Betelgeuse!
+ => 3 
+ruby-1.9.2-p136 :100 > (1..5).map { |i| i**2 }
+ => [1, 4, 9, 16, 25] 
+ruby-1.9.2-p136 :101 > %w[a b c]
+ => ["a", "b", "c"] 
+ruby-1.9.2-p136 :102 > %w[a b c].map { |char| char.i[Kupcase }
+ => ["A", "B", "C"] 
+ruby-1.9.2-p136 :103 > ('a'..'z').to_a.shuffle[0..7]
+ => ["r", "u", "h", "s", "f", "z", "l", "e"] 
+ruby-1.9.2-p136 :104 > ('a'..'z').to_a.shuffle[0..7][K[K[K[K[K[K[K[K[K[K[K[K[K[K
+ => ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"] 
+ruby-1.9.2-p136 :105 > ('a'..'z').to_a.shug[Kffle
+ => ["k", "i", "s", "t", "n", "q", "j", "w", "a", "r", "o", "e", "l", "z", "d", "h", "f", "y", "u", "x", "c", "g", "p", "b", "v", "m"] 
+ruby-1.9.2-p136 :106 > ('a'..'z').to_a.shuffle[0..7]
+ => ["b", "g", "c", "s", "t", "o", "q", "u"] 
+ruby-1.9.2-p136 :107 > ('a'..'z').to_a.shuffle[0..7].join
+ => "nhkvdipu" 
+ruby-1.9.2-p136 :108 > user ={}
+ => {} 
+ruby-1.9.2-p136 :109 > user["first_name"] = "Nate"
+ => "Nate" 
+ruby-1.9.2-p136 :110 > user["last_name"] = "Stir[Ker"
+ => "Stier" 
+ruby-1.9.2-p136 :111 > user["first_name"]
+ => "Nate" 
+ruby-1.9.2-p136 :112 > user
+ => {"first_name"=>"Nate", "last_name"=>"Stier"} 
+ruby-1.9.2-p136 :113 > name.split('')
+NameError: undefined local variable or method `name' for main:Object
+	from (irb):113
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :114 > name.split('')[4h"[4lnname[4h"[4l.
+ => ["n", "a", "m", "e"] 
+ruby-1.9.2-p136 :115 > :name.split('')
+NoMethodError: undefined method `split' for :name:Symbol
+	from (irb):115
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :116 > :name.split('')[15D[4h"[4lname"[10C[16D[P:name[10C[15D[4h"[4lname"[10C[11D[P:name[10C[15D[Kfoobar.reverse
+NameError: undefined local variable or method `foobar' for main:Object
+	from (irb):116
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :117 > foobar.reverse[4h"[4lffoobar[4h"[4l.
+ => "raboof" 
+ruby-1.9.2-p136 :118 > :foobar.reverse
+NoMethodError: undefined method `reverse' for :foobar:Symbol
+	from (irb):118
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :119 > user = { :name => "Nathan Stier", :email "Nathan.Stier@ gmail.com" }
+SyntaxError: (irb):119: syntax error, unexpected tSTRING_BEG, expecting tASSOC
+user = { :name => "Nathan Stier", :email "Nathan.Stier@gmail.com" }
+                                          ^
+(irb):119: syntax error, unexpected '}', expecting $end
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :120 > user = { :name => "Nathan Stier", :email "Nathan.Stier@ gmail.com" }[A[77C [4h [4l[12Crg[4h@[4lg[A[62C[4h=[4l[12Ce@[4hr[4l@[A[63C[4h>[4l[11Cir[4he[4lr[A[64C[11Cie
+ => {:name=>"Nathan Stier", :email=>"Nathan.Stier@gmail.com"} 
+ruby-1.9.2-p136 :121 > user[:name]
+ => "Nathan Stier" 
+ruby-1.9.2-p136 :122 > user[:name]][K][K][K][Kp]a]s]s]w]o]r]d]
+ => nil 
+ruby-1.9.2-p136 :123 > params = {}
+ => {} 
+ruby-1.9.2-p136 :124 > params[:uys[K[K[Kusers[K] = users[K
+ => {:name=>"Nathan Stier", :email=>"Nathan.Stier@gmail.com"} 
+ruby-1.9.2-p136 :125 > params
+ => {:user=>{:name=>"Nathan Stier", :email=>"Nathan.Stier@gmail.com"}} 
+ruby-1.9.2-p136 :126 > params[:users][:email]
+NoMethodError: You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]
+	from (irb):126
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :127 > params[:users][:email][P]
+ => "Nathan.Stier@gmail.com" 
+ruby-1.9.2-p136 :128 > flash = { :success => "i[KIt worked!", :error = > "it[K[KIt faile d [K. :-(" }
+ => {:success=>"It worked!", :error=>"It failed. :-("} 
+ruby-1.9.2-p136 :129 > flash.each do |key,value|
+ruby-1.9.2-p136 :130 >[5Cputs "Key #{key.inspect} has value #{value.inspect} "
+ruby-1.9.2-p136 :131?>   end
+Key :success has value "It worked!"
+Key :error has value "It failed. :-("
+ => {:success=>"It worked!", :error=>"It failed. :-("} 
+ruby-1.9.2-p136 :132 > puts (1..5).to_a
+1
+2
+3
+4
+5
+ => nil 
+ruby-1.9.2-p136 :133 > puts (1..5).to_a.inspect
+[1, 2, 3, 4, 5]
+ => nil 
+ruby-1.9.2-p136 :134 > puts :name, :name.inspect
+name
+:name
+ => nil 
+ruby-1.9.2-p136 :135 > puts "it worked!", "Itworked!"[4h [4lwworked!".inspect
+it worked!
+"It worked!"
+ => nil 
+ruby-1.9.2-p136 :136 > p :name
+:name
+ => :name 
+ruby-1.9.2-p136 :137 > s = "foobar"
+ => "foobar" 
+ruby-1.9.2-p136 :138 > s.class
+ => String 
+ruby-1.9.2-p136 :139 > s = String.new("foobar")
+ => "foobar" 
+ruby-1.9.2-p136 :140 > s.class
+ => String 
+ruby-1.9.2-p136 :141 > s == "foobar"
+ => true 
+ruby-1.9.2-p136 :142 > a = Array.new([1, 3, 2])
+ => [1, 3, 2] 
+ruby-1.9.2-p136 :143 > h = h[KHash.new
+ => {} 
+ruby-1.9.2-p136 :144 > h[:foo]
+ => nil 
+ruby-1.9.2-p136 :145 > h = Hash.new(0)
+ => {} 
+ruby-1.9.2-p136 :146 > h[:foo]
+ => 0 
+ruby-1.9.2-p136 :147 > s = String.new("foobar")
+ => "foobar" 
+ruby-1.9.2-p136 :148 > s.class
+ => String 
+ruby-1.9.2-p136 :149 > s.class.superl[Kclass
+ => Object 
+ruby-1.9.2-p136 :150 > s.class.superclass.superclass
+ => BasicObject 
+ruby-1.9.2-p136 :151 > s.class.superclass.superclass.superclass
+ => nil 
+ruby-1.9.2-p136 :152 > class Word
+ruby-1.9.2-p136 :153?>   def palindrome?(string)
+ruby-1.9.2-p136 :154?>[5Cstring == string.reverse
+ruby-1.9.2-p136 :155?>[5Cend
+ruby-1.9.2-p136 :156?>   end
+ => nil 
+ruby-1.9.2-p136 :157 > w = word.new
+NameError: undefined local variable or method `word' for main:Object
+	from (irb):157
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :158 > w = word.new[K[K[K[K[K[K[K[KWord.new
+ => #<Word:0x000001013837e8> 
+ruby-1.9.2-p136 :159 > w.palinrome? "foobar"
+NoMethodError: undefined method `palinrome?' for #<Word:0x000001013837e8>
+	from (irb):159
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :160 > w.palinrome? "foobar"[4hd[4lr
+ => false 
+ruby-1.9.2-p136 :161 > w.palindrome? "foobar""[K[K[K[K[K[K[Klevel"
+ => true 
+ruby-1.9.2-p136 :162 > class Word < String
+ruby-1.9.2-p136 :163?>   def palindrome?
+ruby-1.9.2-p136 :164?>[5Cself == self.reverse
+ruby-1.9.2-p136 :165?>[5Cem[Knd
+ruby-1.9.2-p136 :166?>   end
+TypeError: superclass mismatch for class Word
+	from (irb):162
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :167 > s = Word.new("level")
+ => #<Word:0x00000101334670> 
+ruby-1.9.2-p136 :168 > s.palindrome?
+ArgumentError: wrong number of arguments (0 for 1)
+	from (irb):153:in `palindrome?'
+	from (irb):168
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :169 > s.palindrome?[12D = Word.new("level")[21Dend[Kself == self.reverse[20Ddef palindrome?[K[15Dclass Word < String[19Ddef palindrome?[K[15Dself == self.reverse[20Ddef palindrome?[K[15Dself == self.reverse[20Dend[Ks = Word.new("level")[20D.palindrome?[K[12D = Word.new("level")[21Dend[Kself == self.reverse[20Ddef palindrome?[K[15Dclass Word < String[19Dw.palindrome? "level"[21Dclass Word < String[K[19Ddef palindrome?[K[15Dself == self.reverse[20Dend[Ks = Word.new("level")[20D.palindrome?[K[13D[Kclass Word < String
+ruby-1.9.2-p136 :170?>   def palinrome[K[K[K[Kdrome?
+ruby-1.9.2-p136 :171?>[5Cself == self.reverse
+ruby-1.9.2-p136 :172?>[5Cend
+ruby-1.9.2-p136 :173?>   end
+TypeError: superclass mismatch for class Word
+	from (irb):169
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :174 > endself == self.reverse[20Ddef palindrome?[K[15Dclass Word < String[19Ds.palindrome?[K[13Dclass Word < String
+ruby-1.9.2-p136 :175?>   class Word < String[19Dend[Kself == self.reverse[20Ddef palindrome?[K[15Dclass Word < String[19Ddef palindrome?[K
+ruby-1.9.2-p136 :176?>[5Cdef palindrome?[15Dclass Word < String[19Dend[Kself == self.reverse
+ruby-1.9.2-p136 :177?>[5Cself == self.reverse[20Ddef palindrome?[K[15Dclass Word < String[19Dend[K
+ruby-1.9.2-p136 :178?>   end
+TypeError: superclass mismatch for class Word
+	from (irb):174
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :179 > s.class
+ => Word 
+ruby-1.9.2-p136 :180 > s.class.superclass
+ => Object 
+ruby-1.9.2-p136 :181 > s.class.superclass.superclass
+ => BasicObject 
+ruby-1.9.2-p136 :182 > "level".palindrome?
+NoMethodError: undefined method `palindrome?' for "level":String
+	from (irb):182
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :183 > calss String[K[K[K[K[K[K[K[K[K[K[KClass
+ => Class 
+ruby-1.9.2-p136 :184 > class String
+ruby-1.9.2-p136 :185?>   def palindrome?
+ruby-1.9.2-p136 :186?>[5Cself = = self.reverse
+ruby-1.9.2-p136 :187?>[5Cend
+ruby-1.9.2-p136 :188?>   end
+ => nil 
+ruby-1.9.2-p136 :189 > "deified".palindrome?
+ => true 
+ruby-1.9.2-p136 :190 > "".blank?
+ => true 
+ruby-1.9.2-p136 :191 > "    ".empty?
+ => false 
+ruby-1.9.2-p136 :192 > "    ".empty?[K[K[K[K[K[Kblank?
+ => true 
+ruby-1.9.2-p136 :193 > nil.blank?
+ => true 
+ruby-1.9.2-p136 :194 > controller = PagesController.new
+ => #<PagesController:0x000001012c0360 @action_has_layout=true, @view_context_class=nil, @_headers={"Content-Type"=>"text/html"}, @_status=200> 
+ruby-1.9.2-p136 :195 > controller.class
+ => PagesController 
+ruby-1.9.2-p136 :196 > controller.class.sperclass
+NoMethodError: undefined method `sperclass' for PagesController:Class
+	from (irb):196
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :197 > controller.class.sperclass[4hu[4lp
+ => ApplicationController 
+ruby-1.9.2-p136 :198 > controller.class.superclass.supeclass
+NoMethodError: undefined method `supeclass' for ApplicationController:Class
+	from (irb):198
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :199 > controller.class.superclass.supeclass[4hr[4lc
+ => ActionController::Base 
+ruby-1.9.2-p136 :200 > controller.class.superclass.superclassass.supeclass
+NoMethodError: undefined method `supeclass' for ActionController::Base:Class
+	from (irb):200
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :201 > controller.class.superclass.superclass.supeclass[4hr[4lc
+ => ActionController::Metal 
+ruby-1.9.2-p136 :202 > controller.class.superclass.superclass.superclass.super class
+ => AbstractController::Base 
+ruby-1.9.2-p136 :203 > controller.class.superclass.superclass.superclass.super class.superclass
+ => Object 
+ruby-1.9.2-p136 :204 > controller.home
+ => "Home" 
+ruby-1.9.2-p136 :205 > class Users[K
+ruby-1.9.2-p136 :206?>   attr_accessor[K[K[K[K[K[K[K[K[K[K[K[K[Kend
+ => nil 
+ruby-1.9.2-p136 :207 > require './example_user'
+LoadError: no such file to load -- ./example_user
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:239:in `require'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:239:in `block in require'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:225:in `block in load_dependency'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:596:in `new_constants_in'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:225:in `load_dependency'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:239:in `require'
+	from (irb):207
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :208 > class Str[K[K[K[K[K[K[K[K
+ruby-1.9.2-p136 :209 >   
+ruby-1.9.2-p136 :210 >   
+ruby-1.9.2-p136 :211 >   #4.5 Exercise 1
+ruby-1.9.2-p136 :212 >   "test"
+ => "test" 
+ruby-1.9.2-p136 :213 > class Strine[Kg
+ruby-1.9.2-p136 :214?>   def jumble
+ruby-1.9.2-p136 :215?>[5Cself.split.shuffle.join
+ruby-1.9.2-p136 :216?>[5Cend
+ruby-1.9.2-p136 :217?>   end
+ => nil 
+ruby-1.9.2-p136 :218 > "JUMBLE!!".jumble
+ => "JUMBLE!!" 
+ruby-1.9.2-p136 :219 > "JUMBLE!!".jumble
+ => "JUMBLE!!" 
+ruby-1.9.2-p136 :220 > s[K"JUMBLE!!".jumble[K[K[K[K[K[Ksplit
+ => ["JUMBLE!!"] 
+ruby-1.9.2-p136 :221 > "JUMBLE!!".split('')
+ => ["J", "U", "M", "B", "L", "E", "!", "!"] 
+ruby-1.9.2-p136 :222 > "JUMBLE!!".split('')[K[5Djumble[17Dend[Kself.split.shuffle.join[23Ddef jumble[K[10Dclass String
+ruby-1.9.2-p136 :223?>   def jumble
+ruby-1.9.2-p136 :224?>[5Cself.split('').shuffle.join
+ruby-1.9.2-p136 :225?>[5Cend
+ruby-1.9.2-p136 :226?>   end
+ => nil 
+ruby-1.9.2-p136 :227 > endself.split('').shuffle.join[27Ddef jumble[K[10Dclass String[12D"JUMBLE!!".split('')[K('')[20Dclass String[K[12D"JUMBLE!!".split('')[K[5Djumble
+ => "!!BMLEUJ" 
+ruby-1.9.2-p136 :228 > "JUMBLE!!".jumble
+ => "MBEUL!J!" 
+ruby-1.9.2-p136 :229 > "JUMBLE!!".jumble
+ => "EJMU!!LB" 
+ruby-1.9.2-p136 :230 > "JUMBLE!!".jumble
+ => "E!LBMJ!U" 
+ruby-1.9.2-p136 :231 > "JUMBLE!!".jumble
+ => "JL!EUBM!" 
+ruby-1.9.2-p136 :232 > #4.5 Exercise 2
+ruby-1.9.2-p136 :233 >   #Never mind to[K[Ksee last problem
+ruby-1.9.2-p136 :234 >   
+ruby-1.9.2-p136 :235 >   #4.5 Exercise 3
+ruby-1.9.2-p136 :236 >   person1 = { :first => "Nate", :last = "Stier }
+ruby-1.9.2-p136 :237"> person2 = { :first => "Tom", :last = "Tommersonsteinsmi th" }
+ruby-1.9.2-p136 :238"> person2 = { :first = > "Dan", :last = [13DTom", :last = "Tommersonsteinsmi th" }[A[77C[4h>[4l[17Cmt[4hi[4lt[A[58C[17Cmi
+ruby-1.9.2-p136 :239"> person2 = { :first => "Tom", :last => "Tommersonsteinsm ith" }[A[77C[17D[P[18Cii[Pth" }[A[54C[4h>[4l[17Cmt[4hi[4lth" }[A[17C[K[54C i[K[A[23Cperson3 = { :first => "Dan" , :last => "Danson" }
+ruby-1.9.2-p136 :240"> person1
+ruby-1.9.2-p136 :241"> puts person1
+ruby-1.9.2-p136 :242"> "
+ruby-1.9.2-p136 :243?>   }
+SyntaxError: (irb):236: syntax error, unexpected '=', expecting tASSOC
+person1 = { :first => "Nate", :last = "Stier }
+                                     ^
+(irb):237: syntax error, unexpected tCONSTANT, expecting $end
+person2 = { :first => "Tom", :last = "Tommersonsteinsmith" }
+                          ^
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :244 > }"puts person1[11D[5Pe[5C3 = { :first => "Dan", :last => "Danson" }[42D2 = { :first => "Tom", :last => "Tommersonsteinsm ith" }[A[53C[P[18Cii[Pth" }[A[26C1 = { :first => "Nate", :last = "Stier }[K[8C t[K[A[69C" }
+SyntaxError: (irb):244: syntax error, unexpected '=', expecting tASSOC
+person1 = { :first => "Nate", :last = "Stier" }
+                                     ^
+(irb):244: syntax error, unexpected '}', expecting $end
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :245 > person1 = hash[K[K[K[KHash.new
+ => {} 
+ruby-1.9.2-p136 :246 > person2=Hash.new
+ => {} 
+ruby-1.9.2-p136 :247 > peson3=Hash.new
+ => {} 
+ruby-1.9.2-p136 :248 > erp[K[K[Kperson1 << :first => "Nate"
+SyntaxError: (irb):248: syntax error, unexpected tASSOC, expecting $end
+person1 << :first => "Nate"
+                    ^
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :249 > person1 << :first => "Nate"[4h{[4l::first => "Nate"}
+NoMethodError: undefined method `<<' for {}:Hash
+	from (irb):249
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :250 > person1 << {:first => "Nate"}[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[:first] = "nate[K[K[K[KNate"
+ => "Nate" 
+ruby-1.9.2-p136 :251 > person1[:first] = "Nate"[P][P][P][P][P][4hl[4l][4ha[4l][4hs[4l][4ht[4l]] = "Nate"[K"[K"[K"[KS"t"i"e"r"
+ => "Stier" 
+ruby-1.9.2-p136 :252 > person1[:last] = "Stier"first] = "Nate"[P[[4h2[4l[[:first] = "Nate"[K"[K"[K"[KN"a"t"h"a"n"
+ => "Nathan" 
+ruby-1.9.2-p136 :253 > person2[:first] = "Nathan"[20D1[:last] = "Stier"[K[P[[4h2[4l[[:last] = "Stier"[K"[K"[K"[K"[KA"c"k"e"r"
+ => "Acker" 
+ruby-1.9.2-p136 :254 > person2[:last] = "Acker"[15Dfirst] = "Nathan"2[P[[4h3[4l[[:first] = "Nathani"e"l""
+NameError: undefined local variable or method `person3' for main:Object
+	from (irb):254
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:44:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands/console.rb:8:in `start'
+	from /Users/natha/.rvm/gems/ruby-1.9.2-p136@rails3tutorial/gems/railties-3.0.3/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-p136 :255 > person3[:first] = "Nathaniel"[23D2[:last] = "Acker"[K[15Dfirst] = "Nathan"[20D1[:last] = "Stier"[K[15Dfirst] = "Nate"[17D << {:first => "Nate"}[18D[P[16C[K[25Dson3=Hash.new[K[13D[4hr[4lson2[9C[14D[Pson3[9C[4hr[4ls
+ => {} 
+ruby-1.9.2-p136 :256 > person3=Hash.new[9D[:first] = "Nathaniel"[23D2[:last] = "Acker"[K[15Dfirst] = "Nathan"[20D1[:last] = "Stier"[K[15Dfirst] = "Nate"[17D << {:first => "Nate"}[18D[P[16C[K[25Dson3=Hash.new[K[13D[4hr[4lson2[9C[14D[Pson3[9C[13D[4hr[4lson2[9C[14D[Pson3[9C[13Drson1 << :first => "Nate"[16D[4h{[4l[16C}[22D[:first] = "Nate"[K[15Dlast] = "Stier"[18D2[:first] = "Nathan"[17Dlast] = "Acker"[K[18D3[:first] = "Nathaniel"[22D=Hash.new[K[9D[:first] = "Nathaniel"
+ => "Nathaniel" 
+ruby-1.9.2-p136 :257 > person3[:first] = "Nathaniel"""[K"[K"[K"[K"[K"[K"[K"[K"[KL""[KK"o"k"o"n"e"n"[P][P][P][P][P][4hl[4l][4ha[4l][4hs[4l][4ht[4l]
+ => "Kokonen" 
+ruby-1.9.2-p136 :258 > person1
+ => {:first=>"Nate", :last=>"Stier"} 
+ruby-1.9.2-p136 :259 > params = Hash.new
+ => {} 
+ruby-1.9.2-p136 :260 > params[:father] = person1
+ => {:first=>"Nate", :last=>"Stier"} 
+ruby-1.9.2-p136 :261 > params[:father] = person1[P][P][P][P][P][P][4hm[4l][4ho[4l][4ht[4l][4hh[4l][4he[4l][4hr[4l]] = person1[K2
+ => {:first=>"Nathan", :last=>"Acker"} 
+ruby-1.9.2-p136 :262 > params[:mother] = person2[P][P][P][P][P][P][4hc[4l][4hh[4l][4hi[4l][4hl[4l][4hd[4l]] = person2[K3
+ => {:first=>"Nathaniel", :last=>"Kokonen"} 
+ruby-1.9.2-p136 :263 > #end of 4.5 exer 3
+ruby-1.9.2-p136 :264 >   params
+ => {:father=>{:first=>"Nate", :last=>"Stier"}, :mother=>{:first=>"Nathan", :last=>"Acker"}, :child=>{:first=>"Nathaniel", :last=>"Kokonen"}} 
+ruby-1.9.2-p136 :265 > #exer 4 read a thing
+ruby-1.9.2-p136 :266 >   exit
+exit
+^C
+ruby-1.9.2-p136 :266 > eit[K[Kxit
+bash-3.2$ exit
+exit
+
+Script done on Tue Feb 15 17:00:35 2011
