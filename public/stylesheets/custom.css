@@ -146,9 +146,9 @@ div.field, div.actions {
   margin-bottom: 10px;
 } 
 
-field_with_errors {
-  margin-top: 10px;
+.field_with_errors {
   padding: 2px;
+  margin: 0px;
   background-color: red;
   display: table;
 }
