@@ -118,9 +118,23 @@ describe UsersController do
       get :new
       response.should have_selector("input[name='user[password]'][type='password']")
     end
+    
+    it "should deny authenticated users" do
+      @user = Factory(:user)
+      test_sign_in(@user)
+      get :new
+      response.should redirect_to(users_path)
+    end
   end
 
   describe "POST 'create'" do
+    
+    it "should deny authenticated users" do
+      @user = Factory(:user)
+      test_sign_in(@user)
+      get :new
+      response.should redirect_to(users_path)
+    end
     
     describe "failure" do
       
