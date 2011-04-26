@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
-  before_filter :authenticate, :only => [:index, :edit, :update]
+  before_filter :authenticate,    :only => [:index, :edit, :update]
   before_filter :nonauthenticate, :only => [:new, :create]
-  before_filter :correct_user, :only => [:edit, :update]
-  before_filter :admin_user,   :only => :destroy
+  before_filter :correct_user,    :only => [:edit, :update]
+  before_filter :admin_user,      :only => :destroy
   
   def show
     @user = User.find(params[:id])
@@ -53,13 +53,15 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    User.find(params[:id]).destroy
-    flash[:success] = "User destroyed"
+    if current_user != User.find(params[:id])
+      User.find(params[:id]).destroy
+      flash[:success] = "User destroyed"
+    end
     redirect_to users_path
   end
 
   private 
-    
+  
     def authenticate
       deny_access unless signed_in?
     end
