@@ -147,7 +147,11 @@ ld: warning: directory not found for option '-L/opt/local/lib'
 ld: warning: directory not found for option '-L/sw/local/lib'
 Undefined symbols for architecture x86_64:
   "_sqlite3_column_database_name", referenced from:
+<<<<<<< HEAD
       _t in cckXlhEI.o
+=======
+      _t in cc5LCHh4.o
+>>>>>>> updating-users
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 checked program was:
@@ -182,7 +186,11 @@ ld: warning: directory not found for option '-L/opt/local/lib'
 ld: warning: directory not found for option '-L/sw/local/lib'
 Undefined symbols for architecture x86_64:
   "_sqlite3_enable_load_extension", referenced from:
+<<<<<<< HEAD
       _t in cccp579Q.o
+=======
+      _t in cc0824x5.o
+>>>>>>> updating-users
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 checked program was:
@@ -217,7 +225,11 @@ ld: warning: directory not found for option '-L/opt/local/lib'
 ld: warning: directory not found for option '-L/sw/local/lib'
 Undefined symbols for architecture x86_64:
   "_sqlite3_load_extension", referenced from:
+<<<<<<< HEAD
       _t in cczvpkUX.o
+=======
+      _t in ccwutdnT.o
+>>>>>>> updating-users
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 checked program was:
