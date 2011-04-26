@@ -52,6 +52,22 @@ describe UsersController do
         response.should have_selector("a", :href => "/users?page=2",
                                            :content => "Next")
       end
+      
+      describe "that are not admins" do
+        it "should not show delete links" do
+          get :index 
+          response.should_not have_selector("a[data-method=\"delete\"]", :content => "delete")
+        end
+      end
+      
+      describe "that are admins" do
+        it "should show delete links" do
+          admin = Factory(:user, :email => "admin@example.com", :admin => true)
+          test_sign_in(admin)
+          get :index
+          response.should have_selector("a[data-method=\"delete\"]", :content => "delete")
+        end
+      end
     end
   end
 
