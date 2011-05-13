@@ -1,9 +1,20 @@
 <%= form_for @micropost do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
   <div class="field">
-    <%= f.text_area :content %>
+    <%= f.text_area :content,
+                    :onkeyup => "updateCount(this);"
+     %>
   </div>
   <div class="actions">
-    <%= f.submit "Submit" %>
+    <%= f.submit "Submit" %><span id="charcount">140</span>
   </div>
+  <script>
+    function updateCount(inputField) {
+      alert("yo");
+      var max = 140;
+      var count = inputField.value.length;
+      var countField = document.getElementById("charcount");
+      countField.innerHTML = max - count;
+    }
+  </script
 <% end %>
