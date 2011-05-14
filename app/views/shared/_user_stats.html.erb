@@ -1,0 +1,16 @@
+
+  <td class="sidebar round">
+    <%= gravatar_for @user %><br>
+    <%= @user.name %><br>
+    <span class="microposts">
+      <%= pluralize(@user.microposts.count, "micropost") %>
+    </span>
+    <strong>URL</strong> <%= link_to user_path(@user), @user %><br />
+    <strong>Microposts</strong> <%= @user.microposts.count %>
+    <%= render 'shared/stats' %>
+    <% unless @users.empty? %>
+      <% @users.each do |user| %>
+        <%= link_to gravatar_for(user, :size => 30), user %>
+      <% end %>
+    <% end %>
+  </td>
