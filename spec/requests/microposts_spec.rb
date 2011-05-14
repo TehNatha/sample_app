@@ -10,6 +10,30 @@ describe "Microposts" do
     click_button
   end
   
+  describe "sidebar" do
+    
+    before(:each) do
+      content = "Lorem ipsum dolor sit amet"
+      visit root_path
+      fill_in :micropost_content, :with => content
+      click_button
+    end
+    
+    describe "should have micropost count theat pluralizes" do
+      
+      it "properly for a single post" do
+        response.should have_selector("span.microposts", :content => "1 micropost")
+      end
+      
+      it "for two posts" do
+        content = "Lorem ipsum dolor sit amet"
+        fill_in :micropost_content, :with => content
+        click_button
+        response.should have_selector("span.microposts", :content => "2 microposts")
+      end
+    end
+  end
+  
   describe "creation" do
     
     describe "failure" do
