@@ -243,3 +243,48 @@ form.new_micropost textarea {
     height: 4em;
     margin-bottom: 0;
 }
+
+ol.microposts {
+    list-style-type: none;
+    margin-left: -75px;
+}
+
+.micropsts li {
+    margin-top: 50px;
+}
+
+.microposts li .user {
+    float: left;
+    clear: left;
+    width: 20%
+}
+
+.microposts li .user .gravatar {
+    float: left;
+    clear: left;;
+}
+
+.microposts li .user .name {
+    float: left;
+    clear: left;
+}
+
+.microposts li .feeditem {
+    float: right;
+    width: 75%;
+}
+
+.microposts li .feeditem .content {
+    float: left;
+}
+
+.microposts li .feeditem .timestamp {
+    float: left;
+    clear: left;
+    font-size: 75%;
+    color: #09c
+}
+
+.microposts li .delete {
+    float: right;
+}
