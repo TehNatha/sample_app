@@ -102,9 +102,9 @@ describe UsersController do
       response.should have_selector("h1>img", :class => "gravatar")
     end
   
-    describe "microposts" do
+    describe "user's microposts" do
       
-      it "should show the user's microposts" do
+      it "should be shown" do
         mp1 = Factory(:micropost, :user => @user, :content => "Foo bar")
         mp2 = Factory(:micropost, :user => @user, :content => "Baz quux")
         get :show, :id => @user
@@ -112,7 +112,7 @@ describe UsersController do
         response.should have_selector("span.content", :content => mp2.content)
       end
       
-      it "should paginate microposts" do
+      it "should paginate" do
         60.times do
           mp0 = Factory(:micropost, :user => @user, :content => "Duck")
         end
