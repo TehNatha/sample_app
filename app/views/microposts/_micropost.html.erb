@@ -6,7 +6,7 @@
     </span>
   </span>
   <% if current_user?(micropost.user) %>
-    <span class="timestamp">
+    <span class="delete">
       <%= link_to "delete", micropost, :method => :delete,
                                        :confirm => "You sure?",
                                        :title => micropost.content %>

@@ -102,20 +102,20 @@ describe UsersController do
       response.should have_selector("h1>img", :class => "gravatar")
     end
   
-    describe "user microposts"
+    describe "user microposts" do
     
       before(:each) do
         60.times do
-          mp0 = Factory(:micropost, :user => @user, :content => "Duck")
+          @mp0 = Factory(:micropost, :user => @user, :content => "Duck")
         end
-        mp1 = Factory(:micropost, :user => @user, :content => "Foo bar")
-        mp2 = Factory(:micropost, :user => @user, :content => "Baz quux")
+        @mp1 = Factory(:micropost, :user => @user, :content => "Foo bar")
+        @mp2 = Factory(:micropost, :user => @user, :content => "Baz quux")
       end
     
       it "should show the user's microposts" do
         get :show, :id => @user
-        response.should have_selector("span.content", :content => mp1.content)
-        response.should have_selector("span.content", :content => mp2.content)
+        response.should have_selector("span.content", :content => @mp1.content)
+        response.should have_selector("span.content", :content => @mp2.content)
       end
             
       it "should paginate" do
@@ -129,13 +129,16 @@ describe UsersController do
       end
       
       it "should have a delete link for current user" do
+        test_sign_in(@user)
+        get :show, :id => @user
+        response.should have_selector("span.delete")
       end
       
       it "should not have a delete link for non-current user" do
         other = Factory(:user, :email => "Pro@Sword.Bro")
         test_sign_in(other)
         get :show, :id => @user
-        response.should_not have.selector("span.delete")
+        response.should_not have_selector("span.delete")
       end
     end
     
@@ -317,7 +320,7 @@ describe UsersController do
         @user.email.should == @attr[:email]
       end
       
-      it "should redirect tot the user show page" do
+      it "should redirect to the user show page" do
         put :update, :id => @user, :user => @attr
         response.should redirect_to(user_path(@user))
       end
